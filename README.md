@@ -4,7 +4,7 @@ LinuxMint PL
 Frequently Asked Questions
 --------------------------
 
-Celem niniejszego opracowania jest zebranie najczęściej pojawiających się pytań na [forum.linux.pl](forum.linux.pl).
+Celem niniejszego opracowania jest zebranie najczęściej pojawiających się pytań na [forum.linuxmint.pl](forum.linuxmint.pl).
 
 ## 1. Organizacja zbioru
 Wykorzystanie składni __markdown__ pozwoli w łatwy sposób formatować text oraz konwertować do innych formatów (HTML).
