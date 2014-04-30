@@ -17,7 +17,7 @@ gdzie
 
 XX - oznacza kategorie, np. 
 
-* OS - pyatnia dot. ogólnie systemu
+* OS - pytania dot. ogólnie systemu
 * HW - pytania dot. sprzętu
 * UI - pytania dot. interfejsu użytkownika
 * AP - pytania dot. aplikacji
