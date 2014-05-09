@@ -47,4 +47,35 @@ Jeśli nie widzimy tam naszego identyfikatora, to próbujemy odszukać go w inny
  e) sh NVIDIA-Linux-x86_64-331.67.run  
  f) restart  
 
+## 4. Jak zainstalować sterownik do karty ATI?
+W przypadku kart ATI instalacja sterownika jest mocno ułatwiona. Cały proces można przeprowadzić w środowisku graficznym, w zasadzie analogicznie do tego jak się to robi w Windows.  
+  
+Wchodzimy na stronę [ATI](http://support.amd.com/en-us/download). Z listy wybieramy odpowiednią linie sterowników. Przykładowo:  
+Polecenie:  
+`lspci -nn`  
+
+Zwróci nam m.in. taka informację:  
+`01:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Juniper XT [Radeon HD 5770] [1002:68b8]
+`
+
+Jak widać mamy do czynienia z karta __HD 5770__. Dlatego też należy wybrać sterownik dla linii __HD 5xxx__. Zostaniemy przekierowani na [stronę](http://support.amd.com/en-us/download/desktop?os=Linux%20x86_64) na której klikamy __Download__ w celu pobrania sterownika.  
+  
+Ściągnięty plik w formacie ZIP należy rozpakować. Powstanie katalog _fglrx-XX.YY.ZZZZ__. Z tego katalogu należy uruchomić z uprawnieniami __root__'a plik z rozszerzeniem _run_, np. 
+`sudo ./amd-driver-installer-14.10.1006-x86.x86_64.run`  
+
+Całość sprowadza się do klinięcia kilka razy na __Next__. W trakcie tego procesu nastąpi zbudowanie odpowiednich modułów kernela oraz zablokowanie innych (czyt. owartych) sterowników.  
+Po restarcie komputera powiniśmy się cieszyć nowym sterownikiem. Możemy się upewnić, że załadowany został poprawny moduł (sterownik) wykorzystując polecenie listowania załadowanych modułów:  
+`lsmod`  
+  
+Jeśli na liście znajduje się moduł __fglrx__ tzn. że operacja zakończyła się sukcesem.
+
+
+
+
+
+
+
+
+
+
 
